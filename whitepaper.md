@@ -63,7 +63,7 @@ again – in the falkOSS family alone there are three ways of storing files toda
 |---|---|
 | **Capture** | Upload files and folders, import from a scanner or by mail; later the mobile app photographs paper directly. |
 | **Improve** | Tools for scans and photos: find the page's edges, straighten a page shot at an angle (perspective), crop, rotate, black and white or greyscale, contrast; several pages into one document. |
-| **Read** | The text layer of digital PDFs, OCR for scans; electronic invoices (XRechnung, ZUGFeRD) as data. aktujo suggests the kind of document – a notice, a contract, an invoice – and its fields: sender, date, amounts, reference numbers, the dates that matter. |
+| **Read** | The text layer of digital PDFs, OCR for scans. aktujo suggests the kind of document and its fields from rules that are data – kinds and rules a person defines for their own documents, whether letters, sheet music, research papers or a collection of books; templates to start from; programs that build aktujo in bring the rules of their trade. |
 | **Label** | Tags, correspondents, kinds of documents and own fields; suggested from rules and from what was labelled before, confirmed by a person; rules that file new documents on their own once trusted. |
 | **Version** | Every change – a new scan, an edited page, a signature – is a new version beside the old ones; any version can be opened, compared and restored. |
 | **Keep** | Originals by hash and an event log of every change; encrypted on the device and on the way; retention and deletion by rule. |
@@ -103,9 +103,8 @@ documents only the device can decrypt; established external programs (for exampl
 
 ## 7. Security, audit and signatures
 
-- **Encryption:** the same scheme as the open protocol librotenado (HPKE, XChaCha20-Poly1305, Ed25519): every set of
-  documents has its members, every member their devices and keys, every device what it needs. librotenado's
-  specification stays independent of aktujo; aktujo is one implementation of its mechanisms, generalised.
+- **Encryption:** HPKE, XChaCha20-Poly1305 and Ed25519: every set of documents has its members, every member their
+  devices and keys, every device what it needs.
 - **Audit log:** every step is an event of the log the sync is built on – signed by the device that wrote it and
   chained by hash, so it is complete and cannot be changed unnoticed; in an organisation it can be kept longer than
   the documents it describes (OPEN: retention rules, GoBD).
@@ -138,8 +137,7 @@ Said ak-TU-jo, stressed on the second-to-last syllable like every Esperanto word
 
 ## 10. Roadmap
 
-1. The core: storage of originals, event log, encryption, local storage, relay – taken out of spezado and
-   librotenado, where they work today.
+1. The core: storage of originals, event log, encryption, local storage, relay.
 2. Recognition in Rust, measured against Tesseract; the scan tools.
 3. aktujo 0.1: one person, one computer – capture, improve, read, label, versions, keep (encrypted, in several
    spaces), find; also as aktujo-minimal, without scanning and OCR. Import from other programs comes later (OPEN:
