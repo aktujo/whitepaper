@@ -7,8 +7,8 @@
   version: "0.1",
   date: none,
   status: "Draft",
-  stand: "2026-11-04",
-  rev: "01f1712",
+  stand: "2026-11-05",
+  rev: "16b2c9f",
 )
 
 == 1. Summary
@@ -156,8 +156,9 @@ Said ak-TU-jo, stressed on the second-to-last syllable like every Esperanto word
 + The core: storage of originals, event log, encryption, local storage, relay -- taken out of spezado and
   librotenado, where they work today.
 + Recognition in Rust, measured against Tesseract; the scan tools.
-+ aktujo 0.1: one person, one computer -- capture, improve, read, label, versions, keep, find; import from
-  paperless-ngx.
++ aktujo 0.1: one person, one computer -- capture, improve, read, label, versions, keep (encrypted, in several
+  spaces), find; also as aktujo-minimal, without scanning and OCR. Import from other programs comes later (OPEN:
+  when).
 + Sync between own devices and sharing; the audit log; the mobile app with the camera.
 + Server and organisations: Docker Compose for one server; PostgreSQL, S3 and the Kubernetes operator for high
   availability; kernoid as login and storage.
